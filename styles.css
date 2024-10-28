@@ -8,7 +8,7 @@
 html {
     height: 100%;
 
-    font-family: "Anton", sans-serif;
+    font-family: "Kablammo", "Anton", sans-serif;
     font-size: 10px;
 }
 
@@ -20,7 +20,7 @@ body {
     justify-content: center;
     overflow-x: hidden;
 
-    background-image: url(./quatro-ilhas.webp);
+    background-image: url(./img/quatro-ilhas.webp);
     background-position: 100%;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -32,9 +32,8 @@ body {
 form {
     width: 40%;
     height: 150px;
-    margin: 30px auto 0;
-    display: flex;
-    flex-wrap: wrap;
+    margin: 20px auto 0;
+    display: grid;
     justify-content: center;
     align-items: center;
 
@@ -48,6 +47,7 @@ form {
 }
 
 form label {
+    width: 100%;
     display: block;
 
     font-size: 2.5rem;
@@ -59,7 +59,8 @@ form label {
 
 form input {
     display: block;
-
+    width: 80%;
+    margin: 0 auto;
     font-size: 2rem;
 
     transition-property: font-size;
@@ -68,7 +69,7 @@ form input {
 
 form button {
     display: block;
-    padding: 0 20px;
+    padding: 5px 30px;
 
     border-radius: 5px;
 
@@ -99,7 +100,7 @@ form button {
     width: 50%;
     height: 500px;
 
-    color: white;
+    color: rgb(255, 183, 0);
 
     text-align: center;
 
@@ -107,22 +108,47 @@ form button {
 }
 
 #output {
+    display: none;
     width: 50%;
-    height: 30%;
-    margin: 40px auto 0;
+    height: 35%;
+    margin: 20px auto 0;
+    padding: 10px;
 
+    border-radius: 10px;
+    background-color: rgba(0, 98, 3, 0.4);
+}
+
+#output-img {
+    width: 100%;
+}
+
+.img {
+    height: 100px;
+    width: 100px;
+    margin: 10px auto 0;
+}
+
+.video {
+    margin-top: 15px;
 }
 
 .text {
     font-size: 1.5rem;
+    font-weight: bolder;
+    font-family: sans-serif;
+    color: white;
 }
 
 h1 {
 
     margin-top: 40px;
 
+    border-radius: 50px;
+
     font-size: 4rem;
     font-weight: 100;
+
+    background-color: rgba(0, 98, 3, 0.4);
 
     transition-property: font-size;
     transition-duration: 1s;
@@ -205,7 +231,7 @@ form button:hover {
 
     body {
         background-position: 75%;
-        background-size: 200%;
+        background-size: 250%;
     }
 
     h1 {
@@ -230,14 +256,14 @@ form button:hover {
 }  
   
 /* Para 480px */  
-@media only screen and (max-width: 500px) and (min-width: 341px) {  
+@media only screen and (max-width: 500px) and (min-width: 0px) {  
     form {
         width: 80%;
     }
 
     body {
         background-position: 50%;
-        background-size: 200%;
+        background-size: 500%;
     }
 
     h1 {
@@ -258,5 +284,9 @@ form button:hover {
 
     #output {
         width: 90%;
+    }
+
+    .text {
+        font-size: 1rem;
     }
 }  
